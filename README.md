@@ -11,3 +11,4 @@ Für die Bearbeitung verwenden wir Obsidian mit diesen Plugins:
 **Empfehlung:**
 - Git
 
+fdjskfhjsd
