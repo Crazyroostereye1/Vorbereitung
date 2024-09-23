@@ -21,7 +21,7 @@ Präfix: *2001:0db8*
 
 **Link-Local**
 Präfix: *fe80::/10*
-Präfix wenn nicht ins Internet geroutet wird (Local)
+Präfix wenn nicht ins Internet geroutet wird nur im Lokalen Netz
 
 **Unique-Local**
 Präfix: *fc00::/7*
