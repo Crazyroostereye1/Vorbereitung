@@ -36,12 +36,23 @@ Dies wird verwendet um zwischen zwei angeschlossen Netzwerke zu kommunizierne al
 ### Multicast
 *Adressbereich:* `ff00::/8`
 Der Multicast ist ähnlich wie bei *IPv4* womit man mehrere Clients gleichzeitig erreichen will. Wie das erzielt wird ist durch das verwenden von speziellen *Flags*:
-*Erster Charakter:*
+**Erster Charakter:**
 ff**0**0
 
-| Flage | Beschreibung                                 |
-| ----- | -------------------------------------------- |
-| 0     | Permanent definierte Adressen (von der IANA) |
-| 1     | Transient oder dynamisch Adressen            |
-| 3     | Unicast Präfix basierte Adresse              |
-| 7     | Multicast                                    |
+| Flage | Beschreibung                                        |
+| ----- | --------------------------------------------------- |
+| 0     | Permanent definierte Adressen (von der IANA)        |
+| 1     | Transient oder dynamisch Adressen                   |
+| 3     | Unicast Präfix basierte Adresse                     |
+| 7     | Multicast Adressen welche den Rendezvozs Points hat |
+**Zweiter Charakter:**
+ff0**0**
+
+| Flage | Beschreibung                                                                                            |
+| ----- | ------------------------------------------------------------------------------------------------------- |
+| 1     | Interfacelokal (Loopback)                                                                               |
+| 2     | link-local werden, alles wird im Lokalen Netz. Verlässt nie das subnetz                                 |
+| 4     | adminlokal, Adressen welche vom Router als speziell makiert sind                                        |
+| 5     | sitelokal, Vom großen Organisation Netz, also können vom Router gerouted werden, aber nicht an boarders |
+| 8     |                                                                                                         |
+| e     |                                                                                                         |

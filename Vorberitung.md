@@ -9,7 +9,7 @@ tags:
 # 2024-09-06
 ## Themen
 - SQL
-- [[ITS-1/Netzwerke]]
+- [Netzwerke](./ITS-1/Netzwerke.md)
 	- IPv6 & IPv4
 	- VPN
 	- Firewall
