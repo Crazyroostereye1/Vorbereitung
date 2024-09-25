@@ -75,5 +75,7 @@ Wenn in einer IPv6 ein Segment nur `0` (also `0000`) kan es zur einer einzigen `
 wird zu
 ``1733:5829:0:6805:0:7a04:e03c:0d1d``
 
-### Mehere 0 Segmente zusammenfassen
-Wenn Mehere 0 Segmente aufeinader folgen werden zur
+### Mehrere 0 Segmente zusammenfassen
+Wenn Mehrere 0 Segmente aufeinander folgen können die zusammengefasst werden mit einem `::`. Diese Aktion kann aber nur einmal in der IP Adresse gemacht werden.
+
+**Beispiel:**
