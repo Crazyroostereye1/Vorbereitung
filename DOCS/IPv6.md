@@ -63,3 +63,17 @@ alle restlichen ziffern können frei belegt werden vom Administrator
 *Adressbereich:* `2000::/3`
 Das sind alle Adressen die im Globalen Internet verwendet. Dort versteht man `2001::` bezieht sich auf das Internet. Dort versteht man aber `2001:0db8:: /32` für standard Internet adressen verwendet wird. 
 
+## Verkürzen
+Wie wir schon vorhin gesehen haben werden IPv6 Adressen in Hexidecimal geschrieben. Das Bedeuted es hat 16 ziffern (1 bis F).
+Weil das Bei 128 immer noch ziemmlich viele Charaktere (32). Diese werden dann noch in 4 Charakteren oder 16 Bit Segmenten Aufgeteilt. Um es zu vereinfachen das zu lesen kann man unter umftänden es verkürzen besonder im fall von 0.
+
+### `0000` zusammenfassen
+Wenn in einer IPv6 ein Segment nur `0` (also `0000`) kan es zur einer einzigen `0`zusammengefasst werden.
+
+**Besipiel:**
+``1733:5829:0000:6805:0000:7a04:e03c:0d1d``
+wird zu
+``1733:5829:0:6805:0:7a04:e03c:0d1d``
+
+### Mehere 0 Segmente zusammenfassen
+Wenn Mehere 0 Segmente aufeinader folgen werden zur
