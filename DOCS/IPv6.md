@@ -48,11 +48,18 @@ ff**0**0
 **Zweiter Charakter:**
 ff0**0**
 
-| Flage | Beschreibung                                                                                            |
-| ----- | ------------------------------------------------------------------------------------------------------- |
-| 1     | Interfacelokal (Loopback)                                                                               |
-| 2     | link-local werden, alles wird im Lokalen Netz. Verlässt nie das subnetz                                 |
-| 4     | adminlokal, Adressen welche vom Router als speziell makiert sind                                        |
-| 5     | sitelokal, Vom großen Organisation Netz, also können vom Router gerouted werden, aber nicht an boarders |
-| 8     |                                                                                                         |
-| e     |                                                                                                         |
+| Flage | Beschreibung                                                                                                                                       |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | Interfacelokal (Loopback)                                                                                                                          |
+| 2     | `link-local` werden, alles wird im Lokalen Netz. Verlässt nie das subnetz                                                                          |
+| 4     | `adminlokal`, Adressen welche vom Router als speziell makiert sind                                                                                 |
+| 5     | `sitelokal`,  können vom Router gerouted werden, aber nicht an boarders                                                                            |
+| 8     | `organisationlokal`, diese werden auch an Border Routern weitergeleitet werden aber nur innerhalb dem "*Unternehmen*" (wir im Router Konfiguriert) |
+| e     | `gloabaler Multicast`, wird überall gerauted                                                                                                       |
+0,3,f sind reserviert
+alle restlichen ziffern können frei belegt werden vom Administrator
+
+### Globaler Unicast
+*Adressbereich:* `2000::/3`
+Das sind alle Adressen die im Globalen Internet verwendet. Dort versteht man `2001::` bezieht sich auf das Internet. Dort versteht man aber `2001:0db8:: /32` für sdandart Internet adressen verwendet wird.
+
