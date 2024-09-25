@@ -61,5 +61,5 @@ alle restlichen ziffern können frei belegt werden vom Administrator
 
 ### Globaler Unicast
 *Adressbereich:* `2000::/3`
-Das sind alle Adressen die im Globalen Internet verwendet. Dort versteht man `2001::` bezieht sich auf das Internet. Dort versteht man aber `2001:0db8:: /32` für sdandart Internet adressen verwendet wird.
+Das sind alle Adressen die im Globalen Internet verwendet. Dort versteht man `2001::` bezieht sich auf das Internet. Dort versteht man aber `2001:0db8:: /32` für standard Internet adressen verwendet wird. 
 
