@@ -70,7 +70,7 @@ Weil das Bei 128 immer noch ziemmlich viele Charaktere (32). Diese werden dann n
 ### `0000` zusammenfassen
 Wenn in einer IPv6 ein Segment nur `0` (also `0000`) kan es zur einer einzigen `0`zusammengefasst werden.
 
-**Besipiel:**
+**Beispiel:**
 ``1733:5829:0000:6805:0000:7a04:e03c:0d1d``
 wird zu
 ``1733:5829:0:6805:0:7a04:e03c:0d1d``
@@ -79,3 +79,12 @@ wird zu
 Wenn Mehrere 0 Segmente aufeinander folgen können die zusammengefasst werden mit einem `::`. Diese Aktion kann aber nur einmal in der IP Adresse gemacht werden.
 
 **Beispiel:**
+``1733:5829:0000:0000:0000:7a04:0000:0000``
+wird zu
+``1733:5829::7a04:0000:0000``
+***!!!Es geht nicht es mehrmals zu machen!!!***
+DAS GEHT NICHT:
+``1733:5829::7a04::``
+Sonder wäre:
+``1733:5829::7a04:0:0`` oder ``1733:5829:0:0:0:7a04::`` 
+

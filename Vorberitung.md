@@ -9,8 +9,9 @@ tags:
 # 2024-09-06
 ## Themen
 - SQL
-- [Netzwerke](./ITS-1/Netzwerke.md)
-	- IPv6 & IPv4
+- Netzwerke
+	- [IPv6](Netzwerke/IPv6.md) 
+	- IPv4
 	- VPN
 	- Firewall
 	- VLANs
@@ -22,7 +23,7 @@ tags:
 - Speicher
 	- Backup (Archive Bild)
 	- RAID / JBOD
-- [[ITS-1/Betriebsysteme]]
+- [[Computing/Betriebsysteme]]
 	- VMs (Hypervisors)
 	- Cloud
 - Serverdienste

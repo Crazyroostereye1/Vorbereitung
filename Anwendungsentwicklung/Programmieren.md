@@ -51,7 +51,7 @@ do {
 Diese Art (übersetzt: `tu-solang`-schleife) ist ähnlich wie die [[#while-schleife]], mit dem großen unterschied das die Schleife zuerst am ausgeführt vor es die Wahrheitsprüfung macht.
 
 
-![[APV.pdf#page=3]]
+![APV](Programmieren_1.pdf#page=3)
 ## Aufgabe 2
 ```java
 for (int i = 0; i < 24; i++) {

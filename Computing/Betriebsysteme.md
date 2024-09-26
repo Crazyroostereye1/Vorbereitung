@@ -22,7 +22,7 @@ Die Resourcenverwaltung beihaltet:
 Der Resourcenkonflikt ist der Fall wenn zwei Applikation die selben Ressourcen haben will und daher sich entgegenstoßen.
 
 # Schichten
-![[OS.png]]
+![[Betriebsysteme_1.png]]
 # Eigenschaften
 ## Multitasking
 Bedeutet das der Rechner aus Anwendersicht Mehrer Programme gleichzeitig verarbeiten kann. 
@@ -53,8 +53,6 @@ Diese schichten sind die Hardware schicht, worin sich die Physische hardware dei
 Danach gibts die Kernal schicht worin sich die Treiber und Systemkritsche Software stücke befinden wie zum Beispiel Dateisystem
 
 Nun kommen wir zur Userspace (Anwendungsschicht) worin sich alle Benutzerbezogenen Programme sich befinden.
-
-![[OS-Layer.canvas|OS Layers]]
 
 ## 2
 

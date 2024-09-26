@@ -7,7 +7,7 @@ tags:
 ---
 
 # Virtualisierung 
-![[Virtualsierung.png]]
+![Virtualsierung_1](Virtualisierung_1.png)
 ## Was ist eine VDI?
 **V**irtuelle **D**esktop **I**nfrastruktur
 
@@ -43,10 +43,4 @@ tags:
 - PaaS - Platform as a Service
 - SaaS - Software as a Service
 
-![[iaas-paas-saas-diagram5.1-1638x1046.png]]
-
-
-### Aufgaben
-**6**
-![[iaas-paas-saas-diagram5.1-1638x1046.png]]
-**7**
+![Virtualisierung_2](Virtualisierung_2.png)

@@ -24,7 +24,7 @@ Die Resourcenverwaltung beihaltet:
 Der Ressourcen Konflikt ist der Fall wenn zwei Applikation die selben Ressourcen haben will und daher sich entgegenstoßen.
 
 # Schichten
-![OS Schicheten](../assets/OS.png)
+![OS Schicheten](Betriebsysteme_1.png)
 # Eigenschaften
 ## Multitasking
 Bedeutet das der Rechner aus Anwendersicht Mehrer Programme gleichzeitig verarbeiten kann. 

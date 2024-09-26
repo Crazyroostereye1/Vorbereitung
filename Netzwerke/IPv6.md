@@ -1,21 +1,19 @@
 ---
 tags:
-  - netzwerke
-  - Abschluss
-  - Übung
+  - its-1
 ---
+# IPv6
+[Dokumentation](DOCS/IPv6.md)
 
-# Networking
-## IPv6
 IPv6 wird in Hexadecimal (basis 16). 0-9 A-F
 Die Länge einer IPv6 sind 128b mit 16b blöcken (4 Charakter), trennung mit :
 
 | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  | 13  | 14  | 15  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | A   | B   | C   | D   | E   | F   |
-### Präfix
+## Präfix
 Standard ist das Präfix 64b lang.
-#### Standard
+### Standard
 **Internet**
 Präfix: *2001:0db8*
 
@@ -33,7 +31,7 @@ Senden eines Packets an mehrer definierte Endgeräte
 
 **Site-Local**
 Präfix *fec0::/10*
-### Kürzen
+## Kürzen
 - 75f5:0826:018b:31d9:1575:cd7a:be86:76aa
 
 **Einmal 0 Segment kürzen**: 
@@ -49,8 +47,8 @@ Präfix *fec0::/10*
 75f5:**0**826:0000:0000:0000:cd7a:be86:76aa
 -> 75f5:**826**:0000:0000:0000:cd7a:be86:76aa
 
-### Subneting
-![[IPv6.png]]
+## Subneting
+![IPv6_1](IPv6_1.png)
 Bei der IPv6 subnet teillung differenzieren bei einem 16 Segment, 4 Charakter, 1 Bit.
 Unter einem 16 Segement verstehen wir einer der 4 Charakter Länge Segmente:
 	**eab7**:673e:10a4:**bbbf**:4183:e4a0:29b0:916e
@@ -64,7 +62,7 @@ Bei dem Subnetting in 4er Schritten heißt 4,8,12,16,20,... müssen wir jeweilig
 
 Bei der Letzen, also der 1 Bit schritte, ist am schwersten. Dort musst du dich zum nächsten Character herantasten und daraufhin den betroffen Charakter in seine Bits aufteilen subtrahieren
 
-#### Beispiele
+### Beispiele
 **16er Segmente**
 eab7:673e:10a4:bbbf:4183:e4a0:29b0:916e /64
 *eab7:673e:10a4:bbbf:: /64*
@@ -99,8 +97,6 @@ eab7:673e:10a4:bbbf:4183:e4a0:29b0:916e /45
 *7086:1976:06ab:af1e /63*
 1111 (64) - 1
 1110  (63)
-
-
 
 
 **Aufgabe**

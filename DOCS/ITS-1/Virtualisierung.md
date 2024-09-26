@@ -1,5 +1,5 @@
 # Virtualisierung 
-![[Virtualsierung.png]]
+![[Virtualisierung_1.png]]
 ## Was ist eine VDI?
 **V**irtuelle **D**esktop **I**nfrastruktur
 
@@ -35,4 +35,4 @@
 - PaaS - Platform as a Service
 - SaaS - Software as a Service
 
-![](../assets/iaas-paas-saas-diagram5.1-1638x1046.png)
+![](Virtualisierung_2.png)
