@@ -1,6 +1,7 @@
 # Entity-Relationship-Diagrams (ERD)
 ## Zeichen der ER Diagramme
 
+![ERD](ERD.svg)
 ![[ERD-Index.excalidraw]]
 Eine Tabelle hat mehrere Entitäten, diese sind Datenwerte wie z.B Name oder Adresse.
 Zwischen mehren Tabellen kann ein Beziehung (Eng.: Relationship) existieren die in zwei Formen verbunden werden kann:
