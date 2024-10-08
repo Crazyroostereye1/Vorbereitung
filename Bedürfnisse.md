@@ -23,3 +23,12 @@ tags:
 Im einfachen Wirtschaftskreislauf gibt es kein Sparen und Investieren. Damit ist die Wirtschaft statisch, d.h. Sie kann nicht wachsen.
 
 ![[Wirtschaft]]
+### Störungen
+- Krieg
+- niedriger Einkommen
+- Konsumverzicht
+- schrumpfende oder stark wachsende Bevölkerung
+- Hohe Arbeitslosigkeit
+- Naturkatastrophe
+
+## Verbraucherschutz
