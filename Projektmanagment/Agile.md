@@ -12,4 +12,9 @@ tags:
 - Reagieren auf Veränderung mehr als das Befolgen eines Plans
 [source](https://agilemanifesto.org/iso/de/manifesto.html)
 
-## SCRUM
+## Vergleich zwischen Agile und Klassichen Projektmanagment
+| Klassisch                                                     | Agile                                                         |
+| ------------------------------------------------------------- | ------------------------------------------------------------- |
+| Anforderungen zu Beginn bekannt                               | Anforderungen zu Beginn an Unscharf                           |
+| Änderungen von Anforderungen während Projektverlauf schwierig | Änderungen an Anforderungen während Projektverlauf eingeplant |
+| Hohe Kosten für späte Anforderungsänderungen                  | Mäßige Kosten für späte Anforderungsänderungen                |
