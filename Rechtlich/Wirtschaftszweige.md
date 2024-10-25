@@ -34,3 +34,21 @@ Bsp.: BMW und Toyota für Brennstoffzellen
 Sind zusammenschlüsse mehrer unabhängige Unternehmen
 
 #### Konzern
+
+### Güter
+```mermaid
+flowchart TD
+
+G[Güter] --> FG[Freie Güter]
+G --> WG[Wirtschafts Güter]
+WG --> R[Rechte]
+WG --> SG[Sachgüter]
+WG --> D[Dienstleitung]
+SG --> KG[Konzerngüter]
+SG --> PG[Produktions Güter]
+KG --> VG[Verbrauchs Güter]
+KG --> PPPG[Produktions Güter]
+PG --> VVG[Verbraucher Güter]
+PG --> PPG[Produktions Güter]
+
+```
