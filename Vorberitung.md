@@ -22,10 +22,11 @@ tags:
 	- WLAN
 - Speicher
 	- Backup (Archive Bild)
-	- RAID / JBOD
+	- [RAID](RAID.md) / JBOD
 - [[Computing/Betriebsysteme]]
 	- VMs (Hypervisors)
 	- Cloud
+	- Backup
 - Serverdienste
 	- AD / User Managment
 - Malware und Prevention
@@ -45,6 +46,7 @@ tags:
 - Verschlüsselung
 - Ergonomie
 - [[DSGVO]]
+- [Arbeitszeugnis](Arbeitszeugnis.md)
 
 
 ## Prio
