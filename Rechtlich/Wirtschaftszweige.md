@@ -31,7 +31,7 @@ Wenn zwei oder mehr Unternehmen von sich Unabhängige unternehem gemeinsam an ei
 Bsp.: BMW und Toyota für Brennstoffzellen
 
 #### Kartell
-Sind zusammenschlüsse mehrer unabhängige Unternehmen
+Sind Zusammenschlüsse mehrere unabhängige Unternehmen
 
 #### Konzern
 
