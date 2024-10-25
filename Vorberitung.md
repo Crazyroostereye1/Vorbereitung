@@ -39,14 +39,15 @@ tags:
 		- Berufsausbildungsschutz 
 	- Wettbewerbsrecht
 	- Kündigungsschutz
+	- [Arbeitszeugnis](Arbeitszeugnis.md)
 	- GANT
 	- Netzplan
+	- Kennzahlen
 - POE
 - [[CSMA|CSMA CD/CA]]
 - Verschlüsselung
 - Ergonomie
 - [[DSGVO]]
-- [Arbeitszeugnis](Arbeitszeugnis.md)
 
 
 ## Prio
