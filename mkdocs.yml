@@ -1,0 +1,8 @@
+site_name: Vorbereitung FISI
+
+theme: readthedocs
+copyright: CC BY-NC
+
+plugins:
+  - search
+  - mermaid2
