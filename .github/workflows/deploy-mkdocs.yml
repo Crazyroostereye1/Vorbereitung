@@ -34,14 +34,20 @@ jobs:
         env:
           WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
           WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
+          WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
         run: |
-          # List files and delete each
-          curl -u "$WEBDAV_USERNAME:$WEBDAV_PASSWORD" -X PROPFIND "${{ secrets.WEBDAV_URL }}/" -H "Depth: 1" | grep -oP '(?<=<d:href>).*?(?=</d:href>)' | while read -r file; do
-            if [ "$file" != "/" ]; then
-              # Delete the file or directory
-              curl -u "$WEBDAV_USERNAME:$WEBDAV_PASSWORD" -X DELETE "${{ secrets.WEBDAV_URL }}${file}"
-            fi
-          done
+          files=$(echo "$response" | grep -oE '<[^>]*:href>[^<]*</[^>]*:href>' | sed -e 's/<[^>]*:href>//' -e 's/<\/[^>]*:href>//' | grep -v '^/$' | grep -v "^${WEBDAV_URL}/$")
+          echo "$files" | while read -r file; do
+            echo "Deleting $file"
+              delete_response=$(curl -s -o /dev/null -w "%{http_code}" -u "$WEBDAV_USERNAME:$WEBDAV_PASSWORD" -X DELETE "$file")
+              if [[ "$delete_response" -eq 204 || "$delete_response" -eq 200 ]]; then
+                echo "Deleted: $file"
+              else
+                echo "Failed to Delete $file with $delete_response"
+                exit 1
+              fi
+            done
+
 
       - name: Deploy to WebDAV
         env:
