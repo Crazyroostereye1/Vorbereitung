@@ -1,60 +1,46 @@
-name: Building and Deploying MKDOCS to webdav
+name: Deploy MkDocs Site to WebDAV
 
 on:
   push:
     branches:
-      - main
+      - main  # Replace with the branch you want to trigger this on
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
-    steps: 
-      - name: Checkout Repository
+    steps:
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Python environment
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.x'
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install mkdocs mkdocs-mermaid2-plugin
+          pip install mkdocs mkdocs-material  # or other plugins/themes you need
 
       - name: Build MkDocs site
-        run: mkdocs build -d site
-        working-directory: .
+        run: mkdocs build
 
-      - name: Install curl for webdav
-        run: sudo apt-get install -y curl
-
-      - name: Clean WebDAV directory
+      - name: Delete old folder on WebDAV server
         env:
-          WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
-          WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
+          WEBDAV_USER: ${{ secrets.WEBDAV_USER }}
+          WEBDAV_PASS: ${{ secrets.WEBDAV_PASS }}
           WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
         run: |
-          files=$(echo "$response" | grep -oE '<[^>]*:href>[^<]*</[^>]*:href>' | sed -e 's/<[^>]*:href>//' -e 's/<\/[^>]*:href>//' | grep -v '^/$' | grep -v "^${WEBDAV_URL}/$")
-          echo "$files" | while read -r file; do
-            echo "Deleting $file"
-              delete_response=$(curl -s -o /dev/null -w "%{http_code}" -u "$WEBDAV_USERNAME:$WEBDAV_PASSWORD" -X DELETE "$file")
-              if [[ "$delete_response" -eq 204 || "$delete_response" -eq 200 ]]; then
-                echo "Deleted: $file"
-              else
-                echo "Failed to Delete $file with $delete_response"
-                exit 1
-              fi
-            done
+          curl -X DELETE -u "$WEBDAV_USER:$WEBDAV_PASS" "<WEBDAV_URL>/<target-folder>/" || echo "Folder does not exist, skipping deletion"
 
-
-      - name: Deploy to WebDAV
+      - name: Upload MkDocs site to WebDAV
         env:
-          WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
-          WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
+          WEBDAV_USER: ${{ secrets.WEBDAV_USER }}
+          WEBDAV_PASS: ${{ secrets.WEBDAV_PASS }}
+          WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
         run: |
-          find site -type f | while read file; do
-            remote_file="${{ secrets.WEBDAV_URL }}/$(echo $file | sed 's|site/||')"
-            curl -u "$WEBDAV_USERNAME:$WEBDAV_PASSWORD" -T "$file" "$remote_file"
+          # Upload each file to the WebDAV server
+          for file in $(find site -type f); do
+            relative_path="${file#site/}"
+            curl -T "$file" -u "$WEBDAV_USER:$WEBDAV_PASS" "<WEBDAV_URL>/<target-folder>/$relative_path"
           done
