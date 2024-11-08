@@ -31,7 +31,7 @@ jobs:
           WEBDAV_PASS: ${{ secrets.WEBDAV_PASS }}
           WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
         run: |
-          curl -X DELETE -u "$WEBDAV_USER:$WEBDAV_PASS" "<WEBDAV_URL>/<target-folder>/" || echo "Folder does not exist, skipping deletion"
+          curl -X DELETE -u "$WEBDAV_USER:$WEBDAV_PASS" "$WEBDAV_URL/public/" || echo "Folder does not exist, skipping deletion"
 
       - name: Upload MkDocs site to WebDAV
         env:
@@ -42,5 +42,5 @@ jobs:
           # Upload each file to the WebDAV server
           for file in $(find site -type f); do
             relative_path="${file#site/}"
-            curl -T "$file" -u "$WEBDAV_USER:$WEBDAV_PASS" "<WEBDAV_URL>/<target-folder>/$relative_path"
+            curl -T "$file" -u "$WEBDAV_USER:$WEBDAV_PASS" "$WEBDAV_URL/public/$relative_path"
           done
