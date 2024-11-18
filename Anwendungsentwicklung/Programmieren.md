@@ -91,9 +91,15 @@ String title = "jdsfhjshf"
 int avgUsedRam = 0;
 int sumTemp = 0;
 
-int[24] = new int[24]{
+int[24] userRam = new int[24]{
 	17,17,16,18,20,25,33,44,40,52,60,56,33,44,40,52,60,56,33,44,34,28,23,16
 };
 
-
+for (int i = 0; i < 24; i++) {
+	sumTemp += usedRam[i];
+}
+avgUsedRam = sumTemp / 24;
+if (avgUsedRam > 74) {
+	msgBox.show(title, message);
+};
 ```
